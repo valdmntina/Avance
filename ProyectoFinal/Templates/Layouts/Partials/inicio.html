@@ -1,0 +1,35 @@
+{% load static %}
+
+<body>
+    <section class="sobre container">
+        <div class="sobre__texto">
+            <h2 class="subtitulo">Tambien conocidas como</h2>
+            <p class="sobre__paragrafo">
+                culebras o víboras son reptiles alargados, de cuerpo cilíndrico y escamoso
+                muy reconocidos al no tener extremidades, se encuentran tanto en ecosistemas acuáticos como terrestres y se 
+                conocen más de 3.500 especies, son carnívoras y depende su especie pueden capturar a su presa enrollandola en su 
+                cuerpo, asfixiandolas así con su fuerza corporal o pueden morderlas e inyectarles su veneno el cual actua paralizando 
+                o matando a la presa su dieta depende de su especie y habitat.
+            </p>
+        </div>
+
+       <figure class="sobre__img" >
+        <img class="sobre__foto" src="{% static "assets/serpiente1.jpeg" %}">
+       </figure> 
+
+       <figure class="sobre__img sobre__img--left"> <!--clase con modificador-->
+        <img class="sobre__foto" src="{% static "assets/serpiente2.jpeg" %}">
+       </figure> 
+
+       <div class="sobre__texto">
+        <h2 class="subtitulo">Caracteristicas</h2>
+        <p>
+            La mayoria de serpientes son ovíparas, es decir que su reproduccion es sexual, la hembra pone un número considerable 
+            de huevos que custodia brutalmente, otras especies son ovovivíparas lo que significa que el huevo se forma dentro de la hembra
+            para posteriormente eclosionar, su longevidad es muy variada dependiendo de la especie, pueden vivir de a 10 a 30 años y su esperanza
+            de vida toma en cuenta varios factores como su tamaño.
+        </p>
+       </div>
+    </section>
+   
+</body>
