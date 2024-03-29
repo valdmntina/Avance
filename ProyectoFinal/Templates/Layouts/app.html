@@ -3,10 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="static/main.css">
+    <title>Inicio</title>
 </head>
 <body>
-    {% include "Layouts/Partials/menu.html" %}
-    {% include "Layouts/Partials/inicio.html" %}
+    
+    <header>
+    {% include "Layouts/Partials/menu.html" %} 
+    </header>
+
+{% block header %}{% endblock header %}
+
+{% include "Layouts/Partials/inicio.html" %}
+{% comment %} {% include "Layouts/Partials/footer.html" %} {% endcomment %}
+
+
 </body>
 </html>
