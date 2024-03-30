@@ -1,6 +1,7 @@
 :root{
     --color-one: #ade2a6;
     --color-two: #73bd6e;
+    --color-three: #11510c;
 }
 
 *{
@@ -11,8 +12,17 @@
     transition: 0.5s;
 }
 
-/* INICIO */
+body{
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+}
 
+.subtitulo{
+    color: var(--color-three);
+}
+
+/* INICIO */
+/* HEADER */
 header{
     text-align: center;
     background-color: var(--color-one);
@@ -57,8 +67,9 @@ nav a:hover{
     top: -20px;
 }
 
+/* FIN HEADER */
 .titulo{
-    color: #73bd6e;
+    color: var(--color-three);
     font-size: 20px;
     margin: 0;
     padding: 10px 20px;
@@ -81,7 +92,7 @@ nav a:hover{
 
 .titulo {
     background-color: #82cd8f;
-    color: #06420e;
+    color: var(--color-three);
     font-size: 20px;
     margin: 0;
     padding: 15px;
@@ -123,15 +134,8 @@ nav a:hover{
     border-radius: 0 10px 0 0;
 }
 
-
-body{
-    text-align: justify;
-    font-family: 'Times New Roman', Times, serif;
-}
-
-
+/* FIN INICIO */
 /* FOOTER */
-
 footer{
     background-color: var(--color-one);
     padding: 2px ;
@@ -144,6 +148,7 @@ footer{
 
 .frase{
     font-size: small;
+    color: black;
 }
 
 .redes-sociales{
@@ -152,7 +157,7 @@ footer{
 
 .redes-sociales a {
     display: inline-block;
-    width: 40px;
+    width: 30px;
     height: 40px;
     margin: 0 5px;
     font-size: 20px;
@@ -178,8 +183,55 @@ footer{
     font-size: smaller;
 }
 
+/* FIN FOOTER */
 /* IMPORTANCIA */
+main{
+    padding: 8px;
+}
 
-.subtitulo{
-    color: #06420e;
+.proposito{
+    text-align: center;
+    font-size: xx-large;
+}
+
+.proposito-h2{
+    padding-top: inherit;
+    font-size: 25px;
+}
+
+.parrafo{
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.container_proposito{
+    margin: 35px;
+    padding: initial;
+}
+
+.imagen-container{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.imagen1, .imagen2, .imagen3{
+    max-width: 10%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(28, 25, 25, 0.1);
+}
+
+.imagen4{
+    max-width: 12%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(28, 25, 25, 0.1);
+}
+
+.footer_importancia{
+    text-align: center;
+    padding: 10px;
+    color: black;
+    background-color: var(--color-one);
 }

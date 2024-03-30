@@ -1,5 +1,4 @@
 
-{% include "Layouts/Partials/menu.html" %}
 
 {% load static %}
 
@@ -8,62 +7,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/main.css">
-    <title>Inicio</title>
+    <link rel="stylesheet" href="{%static 'main.css'%}">
+    <title>Importancia</title>
 </head>
 
 <body>
-    <h1 class="subtitulo">¿Cual es su verdadero proposito?</h1>
-    <p>
-        Todo animal sobre la faz de la tierra cumple un objetivo de vida, las
-        serpientes no son un excepcion a continuación algunos de sus propositos:
-    </p>
+    <header>
+        {% include "Layouts/Partials/menu.html" %}
+    </header>
+    <main>
+        <h2 class="subtitulo proposito">¿Cual es su verdadero proposito?</h2>
+        <p class="proposito">
+            Todo animal sobre la faz de la tierra cumple un objetivo de vida, las
+            serpientes no son un excepcion a continuación algunos de sus propositos:
+        </p>
 
-    <h2 class="subtitulo">Control de poblaciones</h2>
-    <p>
-        Debido a que su dieta en gran parte esta constituida por insectos,
-        roedores y otro tipo de plagas controlan en gran medida la cantidad de
-        estas, ayudando así a mantener un equilibrio en el ecosistema al regular
-        la cantidad de presas.
-    </p>
-    <figure class="">
-        <img class="" src="{% static "assets/serpiente3.jpeg" %}">
-    </figure>
+        <div class="container_proposito">
+            <h3 class="subtitulo proposito-h2">Control de poblaciones</h3>
+            <p class="parrafo">
+                Debido a que su dieta en gran parte esta constituida por insectos,
+                roedores y otro tipo de plagas controlan en gran medida la cantidad de
+                estas, ayudando así a mantener un equilibrio en el ecosistema al regular
+                la cantidad de presas evitando así el crecimiento masivo, por ejemplo, gracias 
+                a su control en la poblacion de roedores las serpientes evitan que estos animales
+                dañen cultivos o propaguen enfermedades, al ser reguladoras de poblaciones tambien ayudan a preservar
+                la diversidad biológica en un ecosistema, desempeñan un papel fundamental en el equilibrio del ecosistema
+                contribuyendo a la salud y estabilidad en los hábitats naturales.
+            </p>
+            <figure class="imagen-container">
+                <img class="imagen1" src="{% static "assets/serpiente3.jpeg" %}">
+            </figure>
 
-    <h2 class="subtitulo">Alimentacion de depredadores:</h2>
-    <p>
-        Las serpientes tambien son fuente importante de la alimentacion de otros
-        depredadores incluyendo aves rapaces (como águilas, halcones, milanos o
-        lechuzas), mamíferos carnivoros (como mapaches, zorros, tejónes o jabalís)
-        y tambien otros reptiles (como iguanas, varanas o lagartos), es decir
-        forman parte de la cadena alimenticia y contribuyen al equilibrio en el
-        ecosistema.
-    </p>
-    <figure class="">
-        <img class="" src="{% static "assets/serpiente4.jpeg" %}">
-    </figure>
+            <h3 class="subtitulo proposito-h2">Alimentacion de depredadores:</h3>
+            <p class="parrafo">
+                Las serpientes tambien son fuente importante de la alimentacion de otros
+                depredadores incluyendo aves rapaces (como águilas, halcones, milanos o
+                lechuzas), mamíferos carnivoros (como mapaches, zorros, tejónes o jabalís)
+                y tambien otros reptiles (como iguanas, varanas o lagartos), es decir
+                forman parte de la cadena alimenticia y contribuyen al equilibrio en el
+                ecosistema, esta interacción depredador-presa es importante para la dinámica del
+                ecosistema sin depredadores que se alimenten de las serpientes su poblacion podria incrementar
+                causando consecuencias negativas para el ecosistema.
+            </p>
+            <figure class="imagen-container">
+                <img class="imagen2" src="{% static "assets/serpiente4.jpeg" %}">
+            </figure>
 
-    <h2 class="subtitulo">Fertilización del suelo:</h2>
-    <p>
-        Al ser animales depredadores, muchas serpientes contribuyen a mantener el
-        control de poblacion de presas en un nivel bajo, evitando asi que las
-        presas se alimenten en exceso de la vegetación que podria causar un
-        desequilibrio en el ecosistema.
-    </p>
-    <figure class="">
-        <img class="" src="{% static "assets/serpiente5.jpeg" %}">
-    </figure>
+            <h3 class="subtitulo proposito-h2">Fertilización del suelo:</h3>
+            <p class="parrafo">
+                Al ser animales depredadores, muchas serpientes contribuyen a mantener el
+                control de poblacion de presas en un nivel bajo, evitando asi que las
+                presas se alimenten en exceso de la vegetación que podria causar un
+                desequilibrio en el ecosistema, al alimentarse de presas las serpientes contribuyen
+                al ciclo de nutrientes al descomponer la materia orgánica a través de su material fecal,
+                lo que ayuda a enriquecer el suelo con nutrientes para el crecimiento de las plantas
+            </p>
+            <figure class="imagen-container">
+                <img class="imagen3" src="{% static "assets/serpiente5.jpeg" %}">
+            </figure>
 
-    <h2 class="subtitulo">Investigacion cientifica:</h2>
-    <p>
-        Su veneno ha sido utilizado en la investigacion de medicamentos y
-        tratamientos de muchas enfermedades, las serpientes son necesarias en el
-        objeto de investigacion de muchas campos de la ciencia, como la biologia ,
-        la farmacologia y la genetica
-    </p>
-    <figure class="">
-        <img class="" src="{% static "assets/serpiente6.jpeg" %}">
-    </figure>
+            <h3 class="subtitulo proposito-h2">Investigacion cientifica:</h3>
+            <p class="parrafo">
+                Su veneno ha sido utilizado en la investigacion de tratamientos de muchas enfermedades, 
+                los componentes de su veneno han sido estudiados para asi poder desarrollar medicamentos y tratamientos para muchas enfermedades
+                como el cáncer, las serpientes son necesarias en el objeto de investigacion de muchas campos de la ciencia, como la biologia ya que 
+                su fisiología, reproducción y adaptacion a los diferentes entornos proporcionan informacion de gran valor.
+            </p>
+            <figure class="imagen-container">
+                <img class="imagen4" src="{% static "assets/serpiente6.jpeg" %}">
+            </figure>
+        </div>
+    </main> 
+    <footer class="footer_importancia">
+        <p>Recuerda, el mejor manejo es el que no se hace</p>
+    </footer>
 </body>
 
 </html>
