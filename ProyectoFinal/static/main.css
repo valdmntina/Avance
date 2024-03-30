@@ -235,3 +235,76 @@ main{
     color: black;
     background-color: var(--color-one);
 }
+
+/* HISTORIA */
+.parrafo_historia{
+    margin: 15px;
+    text-align: center;
+    font-size: unset;
+}
+
+.div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen_1, .imagen_2{
+    max-width: 20%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.imagen_3{
+    max-width: 19%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.imagen_4, .imagen__2{
+    max-width: 135px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.imagen__1, .imagene3{
+    max-width: 199px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.imagen__3{
+    max-width: 250px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.imagen__4{
+    max-width: 120px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.imagens1{
+    max-width: 230px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.imagens2, .imagens3, .imagens4, .imagene1{
+    max-width: 155px;
+    height: auto;
+    border-radius: 2px;
+}
+
+.imagene2{
+    max-width: 140px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.imagene4{
+    max-width: 272px;
+    height: auto;
+    border-radius: 5px;
+}
