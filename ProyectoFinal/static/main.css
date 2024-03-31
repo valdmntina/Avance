@@ -308,3 +308,20 @@ main{
     height: auto;
     border-radius: 5px;
 }
+
+/* UBICACION */
+
+.ubicacion_titulo{
+    margin: 10px;
+}
+
+.contenedor_s{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.datos_contenedor_s{
+    text-align: center;
+}
