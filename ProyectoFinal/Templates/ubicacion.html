@@ -1,8 +1,6 @@
-
 {% load static %}
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,16 +14,18 @@
     <main>
         {% block content %}
         <section>
-            <div class="contenedor_s"></div>
+            <div class="contenedor_s">
                 <h1 class="subtitulo">Aquí encontraras algunas especies ubicadas en Colombia:</h1>
                 <div class="datos_contenedor_s">
                     <figcaption >
                         <ul>
                             {% for s in especie %}
-                            <h3>{{s.nombre_cientifico}}</h3>
-                            <p>{{s.nombre_comun}}</p>
-                            <p>{{s.habitat}}</p>
-                            <p>{{s.id}}</p>
+                              <li>
+                                <h3>{{s.nombre_cientifico}}</h3>
+                                <p>{{s.nombre_comun}}</p>
+                                <p>{{s.habitat}}</p>
+                                <p>{{s.id}}</p>
+                              </li>
                             {% endfor %}
                         </ul>
                     </figcaption>
@@ -33,7 +33,6 @@
             </div>
         </section>
         {% endblock content %}
-</body>
     </main>
-
+</body>
 </html>
