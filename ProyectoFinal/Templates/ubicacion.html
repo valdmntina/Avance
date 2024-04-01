@@ -23,10 +23,10 @@
                         <ul>
                             {% for s in especie %}
                             <li class="contenedor_s">
+                                <p>{{s.id}}</p>
                                 <h3>{{s.nombre_cientifico}}</h3>
                                 <p>{{s.nombre_comun}}</p>
                                 <p>{{s.habitat}}</p>
-                                <p>{{s.id}}</p>
                             </li>
                             {% endfor %}
                         </ul>

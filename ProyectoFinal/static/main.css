@@ -319,11 +319,11 @@ main{
     margin: auto;
     display: flex;
     justify-content: space-around;
-    border-radius: 5px solid var(--color-one);
+    border-radius: 5px;
     width: 22em;
     box-shadow: 8px 8px 5px #c5c5c5;
     padding: 8px 12px;
-    background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+    background-image: linear-gradient(#fff, #ffffff, #ccc);
     border-radius: 30px;
     margin-top: 3%;
     align-items: center;
