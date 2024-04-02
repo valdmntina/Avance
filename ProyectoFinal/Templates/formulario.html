@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <title>Formulario</title>
+</head>
+<body>
+
+    <header>
+        {% include "Layouts/Partials/menu.html" %}
+    </header>
+
+    <form action="" method="post"></form>
+    {% csrf_token %}
+    <div>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre">
+    </div>
+    
+    <div>
+        <label for="apellido">Apellido</label>
+        <input type="text" name="apellido" id="apellido">
+    </div>
+
+    <div>
+        <label for="telefono">Telefono</label>
+        <input type="text" name="telefono" id="telefono">
+    </div>
+    
+    <div>
+        <label for="correo">Correo</label>
+        <input type="text" name="correo" id="correo">
+    </div>
+
+    <div>
+        <label for="ubicacion">Ubicacion</label>
+        <input type="text" name="ubicacion" id="ubicacion">
+    </div>
+
+    <div>
+        <button type="submit">Registrar</button>
+    </div>
+
+</body>
+</html>

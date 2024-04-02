@@ -14,3 +14,9 @@ class Caracteristica(models.Model):
     alimentacion = models.CharField(max_length=100)
     serpiente = models.ForeignKey(Serpientes, on_delete=models.PROTECT)
    
+class Formulario(models.Model):
+    nombre = models.CharField(max_length=100)
+    apellido = models.CharField(max_length=100)
+    telefono = models.CharField(max_length=10)
+    correo = models.EmailField()
+    ubicacion = models.CharField(max_length=100)

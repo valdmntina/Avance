@@ -11,5 +11,5 @@ urlpatterns = [
     path('caracteristica_serpiente/', views.caracteristica_serpiente, name='caracteristica_serpiente'), #usar de nuevo solo si es necesario, comentar los que ya estan
     path('elimina/<int:id>', views.elimina, name='elimina'),
     path('ubicacion/', views.lista_serpientes, name='Lista_serpientes'),
-    # path('ubicacion/', views.caracteristica_serpiente, name='lista_serpientes'),
+    path('formulario/', views.formulario, name='Formulario'),
 ]   

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Serpientes, Caracteristica
+from .models import Serpientes, Caracteristica, Formulario
 # Create your views here.
 
 def index(request):
@@ -227,15 +227,26 @@ def elimina(request, id):
     caracteristica.delete()
     return HttpResponse('Se eliminaron los repetidos')
 
-#esto es para una vez ya tenga metidas las serpientes
+
 def lista_serpientes(request):
     especies = Serpientes.objects.all()
     return render (request, 'ubicacion.html', {
         'especie': especies
     } )
 
-# def caracteristica_serpiente(request, serpiente_id):
-#     especie = Serpientes.objects.all(id=serpiente_id)
-#     return render(request, 'ubicacion.html', {
-#         'especie': especie
-#     })
+def formulario(request):
+    return render(request, 'formulario.html')
+
+def registrar_formulario(request):
+    nombre = request.POST['nombre']
+    apellido = request.POST['apellido']
+    telefono = request.POST['telefono']
+    correo = request.POST['correo']
+    ubicacion = request.POST['ubicacion']
+    Formulario.objects.create(nombre=nombre,
+                              apellido=apellido,
+                              telefono=telefono,
+                              correo=correo,
+                              ubicacion=ubicacion)
+
+
