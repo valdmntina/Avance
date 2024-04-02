@@ -43,9 +43,14 @@ nav a:hover{
     background-color: var(--color-two)
 }
 
+.boton_f{
+    text-align: right;
+    margin-right: auto;
+}
+
 .encabezado-img{
     background-image: url(assets/escamas.avif);
-    height: 200px;
+    height: 150px;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -86,7 +91,7 @@ nav a:hover{
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px;
+    margin: 45px;
     overflow: hidden;
 }
 

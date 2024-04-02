@@ -1,8 +1,11 @@
-<link rel="stylesheet" href="static/main.css">
+{% load static %}
 
-<nav class="navbar">
+<link rel="stylesheet" href="{% static 'main.css' %}">
+
+<nav>
     <a href="{% url "Importancia" %}">Importancia</a>
     <a href="{% url "Historia" %}" >Historia</a>
     <a href="{% url "Lista_serpientes" %}">Ubicacion</a>
+    <a class="boton_f" href="#">¿Dudas? da click aquí</a>
 </nav>
     
