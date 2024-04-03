@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <title>Más informacion</title>
+</head>
+<body>
+
+    <header>
+        {% include 'Layouts/Partials/menu.html' %}
+    </header>
+    
+    <main>
+        <h1>Caracteristicas de la especie</h1>
+        <p>Venenosa: 
+            {% if serpiente.caracteristica.venenosa == 0 %}
+            No
+            {% else %}
+            Sí
+            {% endif %}
+        </p>
+        <p>
+            Patrón de colores: {{ serpiente.caracteristica.color_patron }}
+        </p>
+        <p>
+            Alimentación: {{ serpiente.caracteristica.alimentacion }}
+        </p>
+
+    </main>
+
+</body>
+</html>

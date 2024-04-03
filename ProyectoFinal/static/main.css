@@ -88,7 +88,6 @@ nav a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     padding: 20px;
 }
 
@@ -96,7 +95,7 @@ nav a:hover{
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 45px;
+    margin: 25px;
     overflow: hidden;
 }
 
@@ -115,9 +114,15 @@ nav a:hover{
 }
 
 .texto {
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     border-bottom: 1px solid #dee2e6;
+    width: 800px;
+    height: 528px;
+    justify-content: space-between;
 }
+
 
 .imagen {
     display: flex;
@@ -127,13 +132,16 @@ nav a:hover{
 }
 
 .foto {
-    max-width: 50%;
+    width: 50%;
     height: auto;
     border-radius: 10px;
 }
 
 .foto2{
-    max-width: 50%;
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+
 }
 
 .titulo-izquierda {
@@ -207,12 +215,15 @@ main{
 .proposito-h2{
     padding-top: inherit;
     font-size: 25px;
+    text-align: center;
+    margin-top: 5rem;
 }
 
 .parrafo{
     font-size: 18px;
     line-height: 1.5;
     margin-bottom: 20px;
+    padding: 2rem 10rem;
 }
 
 .container_proposito{
@@ -226,6 +237,7 @@ main{
 }
 
 .imagen1{
+    margin-top: -38px;
     max-width: 10%;
     height: auto;
     border-radius: 5px;
@@ -271,8 +283,14 @@ main{
     border-radius: 5px;
 }
 
-.imagen_4, .imagen__2{
+.imagen__2{
     max-width: 135px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.imagen_4{
+    max-width: 195px;
     height: auto;
     border-radius: 5px;
 }
@@ -323,6 +341,7 @@ main{
 
 .ubicacion_titulo{
     margin: 10px;
+    text-align: center;
 }
 
 .contenedor_s{

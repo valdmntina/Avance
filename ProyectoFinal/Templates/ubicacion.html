@@ -26,6 +26,7 @@
                                 <h3>{{s.nombre_cientifico}}</h3>
                                 <p>{{s.nombre_comun}}</p>
                                 <p>{{s.habitat}}</p>
+                                <a href="{% url "info_serpiente" s.id %}">Ver más</a>
                             </li>
                             {% endfor %}
                         </ul>

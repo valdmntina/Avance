@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Serpientes, Caracteristica, Formulario
 # Create your views here.
@@ -248,5 +248,10 @@ def registrar_formulario(request):
                               telefono=telefono,
                               correo=correo,
                               ubicacion=ubicacion)
+    return redirect("index")
 
-
+def info_serpiente(request, id):
+    serpiente = Serpientes.objects.get(id=id)
+    return render(request, "info_serpiente.html", {
+        'serpiente': serpiente
+    })

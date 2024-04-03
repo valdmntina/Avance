@@ -12,7 +12,7 @@ class Caracteristica(models.Model):
     venenosa = models.BooleanField(default=False) #especifica el valor por defecto si se intenta ingresar un valor vacio
     color_patron = models.CharField(max_length=100)
     alimentacion = models.CharField(max_length=100)
-    serpiente = models.ForeignKey(Serpientes, on_delete=models.PROTECT)
+    serpiente = models.OneToOneField(Serpientes, on_delete=models.PROTECT)
    
 class Formulario(models.Model):
     nombre = models.CharField(max_length=100)
