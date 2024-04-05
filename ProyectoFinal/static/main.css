@@ -203,6 +203,10 @@ footer{
 
 /* FIN FOOTER */
 /* IMPORTANCIA */
+.container-importancia{
+    margin: 1rem;
+}
+
 main{
     padding: 8px;
 }
@@ -210,6 +214,7 @@ main{
 .proposito{
     text-align: center;
     font-size: xx-large;
+    margin: 1rem;
 }
 
 .proposito-h2{
@@ -259,6 +264,7 @@ main{
 }
 
 /* HISTORIA */
+
 .parrafo_historia{
     margin: 15px;
     text-align: center;
@@ -290,7 +296,7 @@ main{
 }
 
 .imagen_4{
-    max-width: 195px;
+    max-width: 137px;
     height: auto;
     border-radius: 5px;
 }
