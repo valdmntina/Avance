@@ -11,6 +11,7 @@ class Serpientes(models.Model):
 
     def __str__(self):
       return self.nombre_comun
+    
 
 class Caracteristica(models.Model):
     venenosa = models.BooleanField(default=False) #especifica el valor por defecto si se intenta ingresar un valor vacio

@@ -2,48 +2,98 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'main.css' %}">
     <title>Formulario</title>
 </head>
+
 <body>
 
     <header>
         {% include "Layouts/Partials/menu.html" %}
     </header>
 
-    <form action="" method="post"></form>
-    {% csrf_token %}
-    <div>
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre">
-    </div>
-    
-    <div>
-        <label for="apellido">Apellido</label>
-        <input type="text" name="apellido" id="apellido">
-    </div>
 
-    <div>
-        <label for="telefono">Telefono</label>
-        <input type="text" name="telefono" id="telefono">
-    </div>
-    
-    <div>
-        <label for="correo">Correo</label>
-        <input type="text" name="correo" id="correo">
-    </div>
+    <section class="contenedor">
+        <div class="fondo">
+            <h2 class="subtitulo titulo_datos">Por favor ingresa tus datos</h2>
+        </div>
+        <form method="post" class="formulario">
+            {% csrf_token %}
+            <div class="entrada">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre">
+            </div>
 
-    <div>
-        <label for="ubicacion">Ubicacion</label>
-        <input type="text" name="ubicacion" id="ubicacion">
-    </div>
+            <div class="entrada">
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" id="apellido">
+            </div>
 
-    <div>
-        <button type="submit">Registrar</button>
-    </div>
+            <div class="entrada">
+                <label for="telefono">Telefono</label>
+                <input type="text" name="telefono" id="telefono">
+            </div>
+
+            <div class="entrada">
+                <label for="correo">Correo</label>
+                <input type="text" name="correo" id="correo">
+            </div>
+
+            <div class="entrada">
+                <label for="ubicacion">Ubicacion</label>
+                <div class="columna">
+                    <div class="caja-select">
+                        <select name="ubicacion" id="ubicacion" name="ubicacion">
+                            <option value="">Seleccione su departamento</option>
+                            <option value="amazonas">Amazonas</option>
+                            <option value="vichada">vichada</option>
+                            <option value="caquetá">Caquetá</option>
+                            <option value="meta">Meta</option>
+                            <option value="guainía">Guainía</option>
+                            <option value="antioquia">Antioquia</option>
+                            <option value="vaupés">Vaupés</option>
+                            <option value="guaviare">Guaviare</option>
+                            <option value="chocó">Chocó</option>
+                            <option value="casanare">Casanare</option>
+                            <option value="nariño">Nariño</option>
+                            <option value="santander">Santander</option>
+                            <option value="cauca">Cauca</option>
+                            <option value="bolívar">Bolívar</option>
+                            <option value="córdoba">Cordoba</option>
+                            <option value="putumayo">Putumayo</option>
+                            <option value="cundinamarca">Cundinamarca</option>
+                            <option value="arauca">Arauca</option>
+                            <option value="tolima">Tolima</option>
+                            <option value="boyacá">Boyacá</option>
+                            <option value="magdalena">Magdalena</option>
+                            <option value="cesar">Cesar</option>
+                            <option value="valle_del_cauca">Valle del Cauca</option>
+                            <option value="norte_de_santander">Norte de Santander</option>
+                            <option value="la_guajira">La Guajira</option>
+                            <option value="huila">Huila</option>
+                            <option value="sucre">Sucre</option>
+                            <option value="caldas">Caldas</option>
+                            <option value="risaralda">Risaralda</option>
+                            <option value="atlántico">Atlántico</option>
+                            <option value="quindío">Quindío</option>
+                            <option value="bogotá_d_c">Bogotá, D.C</option>
+                            <option value="san_andrés_y_providencia">San Andrés y Providencia</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <button type="submit">Registrar</button>
+            </div>
+        </form>
+    </section>
+
 
 </body>
+
 </html>

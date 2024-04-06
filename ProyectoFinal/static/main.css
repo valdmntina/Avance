@@ -8,14 +8,14 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Poppins", sans-serif;
     box-sizing: border-box;
     transition: 0.5s;
 }
 
 body{
     text-align: justify;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Poppins", sans-serif;
 }
 
 .subtitulo{
@@ -296,7 +296,7 @@ main{
 }
 
 .imagen_4{
-    max-width: 137px;
+    max-width: 12rem;
     height: auto;
     border-radius: 5px;
 }
@@ -366,4 +366,92 @@ main{
     flex-direction: column;
 }
 
+/* FORMULARIO */
 
+.fondo{
+    background-color: var(--color-four);
+    color: var(--color-three);
+    font-size: 20px;
+    margin: 0;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+}
+.titulo_datos{
+    text-align: center;
+}
+
+.contenedor{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor .formulario{
+    margin-top: 30px;
+}
+
+.formulario .entrada{
+    margin-top: 30px;
+}
+
+.entrada label{
+    color: var(--color-three);
+    -webkit-text-stroke: 1px;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.formulario :where(.entrada input, .caja-select){
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    /* color: ; */
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+
+.entrada input:focus{
+    box-shadow: 0 2px var(--color-four);
+}
+
+.formulario .columna{
+    display: flex;
+    column-gap: 15px;
+}
+
+.caja-select select{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    /* color: ; */
+    font-size: 1rem;
+}
+
+.formulario button{
+    height: 55px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2 ease;
+    background: var(--color-four);
+}
+
+.formulario button:hover{
+    background: var(--color-two);
+}
