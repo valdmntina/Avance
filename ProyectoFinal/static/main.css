@@ -125,20 +125,20 @@ nav a:hover{
 
 
 .imagen {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     padding: 20px;
 }
 
 .foto {
-    width: 50%;
+    width: 59%;
     height: auto;
     border-radius: 10px;
 }
 
 .foto2{
-    width: 50%;
+    width: 46%;
     height: auto;
     border-radius: 10px;
 
@@ -381,7 +381,7 @@ main{
 }
 
 .contenedor{
-    margin-top: 25px;
+    margin-top: 5.5rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -398,49 +398,47 @@ main{
     margin-top: 30px;
 }
 
-.formulario .entrada{
+.formulario div{
     margin-top: 30px;
 }
 
-.entrada label{
+div label{
     color: var(--color-three);
     -webkit-text-stroke: 1px;
     font-size: 1.2rem;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.formulario :where(.entrada input, .caja-select){
+.formulario :where(div input){
     position: relative;
     height: 50px;
     width: 100%;
     outline: none;
     font-size: 1rem;
-    /* color: ; */
     margin-top: 8px;
     border: 1px solid #ddd;
     border-radius: 6px;
     padding: 0 15px;
 }
 
-.entrada input:focus{
+div input:focus{
     box-shadow: 0 2px var(--color-four);
 }
 
-.formulario .columna{
+.formulario div{
     display: flex;
     column-gap: 15px;
 }
 
-.caja-select select{
+/* .caja-select select{
     height: 100%;
     width: 100%;
     outline: none;
     border: none;
-    /* color: ; */
     font-size: 1rem;
-}
+} */ 
 
-.formulario button{
+.botoncito{
     height: 55px;
     width: 100%;
     color: #fff;
@@ -450,9 +448,9 @@ main{
     border: none;
     cursor: pointer;
     transition: all 0.2 ease;
-    background: var(--color-four);
-}
-
-.formulario button:hover{
     background: var(--color-two);
 }
+
+.botoncito:hover{
+    background: var(--color-four);
+} 

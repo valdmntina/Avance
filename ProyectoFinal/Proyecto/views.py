@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Serpientes, Caracteristica, Formulario
+from .forms import Form
+
 # Create your views here.
 
 def index(request):
@@ -234,24 +236,38 @@ def lista_serpientes(request):
         'especie': especies
     } )
 
-def formulario(request):
-    return render(request, 'formulario.html')
-
-def registrar_formulario(request):
-    nombre = request.POST['nombre']
-    apellido = request.POST['apellido']
-    telefono = request.POST['telefono']
-    correo = request.POST['correo']
-    ubicacion = request.POST['ubicacion']
-    Formulario.objects.create(nombre=nombre,
-                              apellido=apellido,
-                              telefono=telefono,
-                              correo=correo,
-                              ubicacion=ubicacion)
-    return redirect("index")
 
 def info_serpiente(request, id):
     serpiente = Serpientes.objects.get(id=id)
     return render(request, "info_serpiente.html", {
         'serpiente': serpiente
+    })
+
+# def formulario(request):
+#     return render(request, 'formulario.html')
+
+# def registrar_formulario(request):
+#     nombre = request.POST['nombre']
+#     apellido = request.POST['apellido']
+#     telefono = request.POST['telefono']
+#     correo = request.POST['correo']
+#     ubicacion = request.POST['ubicacion']
+#     Formulario.objects.create(nombre=nombre,
+#                               apellido=apellido,
+#                               telefono=telefono,
+#                               correo=correo,
+#                               ubicacion=ubicacion)
+#     return redirect("index")
+
+
+def formulario(request):
+    if request.method == 'POST':
+        form = Form(request.POST)
+        if form.is_valid():
+            form.save
+            return HttpResponse("Formulario exitoso")
+        else:
+            form = Form()
+        return render(request, 'formulario.html',{
+        'formulario': form
     })
