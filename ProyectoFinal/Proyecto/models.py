@@ -2,41 +2,6 @@ from django.db import models
 
 # Create your models here.
 
-options = [
-    ['Amazonas', 'Amazonas'],
-    ['Vichada', 'Vichada'],
-    ['Caquetá', 'Caquetá'],
-    ['Meta', 'Meta'],
-    ['Guainía', 'Guainía'],
-    ['Antioquia', 'Antioquia'],
-    ['Vaupés', 'Vaupés'],
-    ['Guaviare', 'Guaviare'],
-    ['Chocó', 'Chocó'],
-    ['Casanare', 'Casanare'],
-    ['Nariño', 'Nariño'],
-    ['Santander', 'Santander'],
-    ['Cauca', 'Cauca'],
-    ['Bolívar', 'Bolívar'],
-    ['Cordoba', 'Cordoba'],
-    ['Putumayo', 'Putumayo'],
-    ['Cundinamarca', 'Cundinamarca'],
-    ['Arauca', 'Arauca'],
-    ['Tolima', 'Tolima'],
-    ['Boyacá', 'Boyacá'],
-    ['Magdalena', 'Magdalena'],
-    ['Cesar', 'Cesar'],
-    ['Valle del Cauca', 'Valle del Cauca'],
-    ['Norte de Santander', 'Norte de Santander'],
-    ['La Guajira', 'La Guajira'],
-    ['Huila', 'Huila'],
-    ['Sucre', 'Sucre'],
-    ['Caldas', 'Caldas'],
-    ['Risaralda', 'Risaralda'],
-    ['Atlántico', 'Atlántico'],
-    ['Quindío', 'Quindío'],
-    ['Bogotá, D.C', 'Bogotá, D.C'],
-]
-
 
 class Serpientes(models.Model):
     nombre_cientifico = models.CharField(max_length=100)
@@ -66,4 +31,3 @@ class Formulario(models.Model):
     telefono = models.CharField(max_length=10,
                                 verbose_name='Telefono')
     correo = models.EmailField(verbose_name='Correo electronico')
-    ubicacion = models.CharField(choices=options , max_length=100, verbose_name='Ubicacion')

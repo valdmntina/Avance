@@ -4,4 +4,4 @@ from .models import Formulario
 class Form(forms.ModelForm):
     class Meta: #subclase 
         model = Formulario
-        fields = ['nombre', 'apellido', 'telefono', 'correo', 'ubicacion']
+        fields = ['nombre', 'apellido', 'telefono', 'correo']

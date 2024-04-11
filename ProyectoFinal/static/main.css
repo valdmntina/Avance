@@ -348,17 +348,21 @@ main{
 .ubicacion_titulo{
     margin: 10px;
     text-align: center;
+    font-size: xx-large;
 }
 
 .contenedor_s{
     margin: auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
     justify-content: space-around;
     border-radius: 5px;
-    width: 22em;
+    width: 90%;
+    max-width: 1200px;
     box-shadow: 8px 8px 5px #c5c5c5;
     padding: 8px 12px;
-    background-image: linear-gradient(#fff, #ffffff, #ccc);
+    background-image: linear-gradient(#9bff89, #bbffc6, #dbffd4);
     border-radius: 30px;
     margin-top: 3%;
     align-items: center;
@@ -381,10 +385,11 @@ main{
 }
 
 .contenedor{
+    flex: 1;
     margin-top: 2rem;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 85rem;
     transform: translate(-50%, -50%);
     max-width: 700px;
     width: 100%;
@@ -429,14 +434,6 @@ div input:focus{
     display: flex;
     column-gap: 15px;
 }
-
-/* .caja-select select{
-    height: 100%;
-    width: 100%;
-    outline: none;
-    border: none;
-    font-size: 1rem;
-} */ 
 
 .botoncito{
     height: 55px;

@@ -2,8 +2,8 @@ from django.contrib import admin
 from .models import *
 
 class FormularioAdmin(admin.ModelAdmin):
-    list_display = ('nombre', 'apellido', 'telefono', 'correo')
-    search_fields = ('nombre', 'correo')
+    list_display = ('nombre', 'apellido', 'telefono')
+    search_fields = ('nombre', 'telefono')
     list_filter = ('nombre', 'apellido')
 
 # Register your models here.

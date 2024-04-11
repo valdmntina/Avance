@@ -22,9 +22,8 @@
                         <ul>
                             {% for s in especie %}
                             <li class="contenedor_s">
-                                <p>{{s.id}}</p>
-                                <h3>{{s.nombre_cientifico}}</h3>
-                                <p>{{s.nombre_comun}}</p>
+                                <h3>{{s.nombre_comun}}</h3>
+                                <p>{{s.nombre_cientifico}}</p>
                                 <p>{{s.habitat}}</p>
                                 <a href="{% url "info_serpiente" s.id %}">Ver más</a>
                             </li>
