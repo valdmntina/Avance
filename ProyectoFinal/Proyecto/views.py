@@ -243,8 +243,11 @@ def info_serpiente(request, id):
         'serpiente': serpiente
     })
 
-# def formulario(request):
-#     return render(request, 'formulario.html')
+def formulario(request):
+  form = Form()
+  return render(request, 'formulario.html',{
+      'formulario': form})
+
 
 # def registrar_formulario(request):
 #     nombre = request.POST['nombre']
@@ -260,14 +263,15 @@ def info_serpiente(request, id):
 #     return redirect("index")
 
 
-def formulario(request):
-    if request.method == 'POST':
-        form = Form(request.POST)
-        if form.is_valid():
-            form.save
-            return HttpResponse("Formulario exitoso")
-        else:
-            form = Form()
-        return render(request, 'formulario.html',{
-        'formulario': form
-    })
+# def formulario(request):
+#     if request.method == 'POST':
+#         form = Form(request.POST)
+#         if form.is_valid():
+#             #form.save
+#             #return HttpResponse("Formulario exitoso")
+#             return render(request, 'formulario.html', {})
+#         else:
+#             form = Form()
+#             return render(request, 'formulario.html',{
+#             'formulario': form
+#     })

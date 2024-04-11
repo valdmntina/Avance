@@ -125,14 +125,14 @@ nav a:hover{
 
 
 .imagen {
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
 }
 
 .foto {
-    width: 59%;
+    width: 43%;
     height: auto;
     border-radius: 10px;
 }
@@ -381,7 +381,7 @@ main{
 }
 
 .contenedor{
-    margin-top: 5.5rem;
+    margin-top: 2rem;
     position: absolute;
     top: 50%;
     left: 50%;
