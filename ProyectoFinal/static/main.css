@@ -31,6 +31,17 @@ header{
     margin: 0%;
 }
 
+.logo{
+    width: 2.5rem;
+}
+
+.div_navegacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 nav a.boton{
     display: inline-block;
     text-decoration: none;
@@ -408,6 +419,7 @@ main{
 }
 
 div label{
+    width: 125px;
     color: var(--color-three);
     -webkit-text-stroke: 1px;
     font-size: 1.2rem;
