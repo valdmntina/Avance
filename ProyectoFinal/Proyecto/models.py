@@ -25,7 +25,8 @@ class Caracteristica(models.Model):
 
 class Formulario(models.Model):
     nombre = models.CharField(max_length=100,
-                              verbose_name='Nombre')
+                              verbose_name='Nombre',
+                              null=False)
     apellido = models.CharField(max_length=100,
                                 verbose_name='Apellido')
     telefono = models.CharField(max_length=10,

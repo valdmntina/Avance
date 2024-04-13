@@ -3,14 +3,18 @@
 <link rel="stylesheet" href="{% static 'main.css' %}">
 
 <div class="div_navegacion">
-    <a href="{% url "index" %}" class="logo">
-        <img src="{% static "assets/houses.png" %}" alt="logo">
-    </a>
+    <div class="logo">
+        <a href="{% url "index" %}">
+            <img src="{% static "assets/houses.png" %}" alt="logo">
+        </a>
+    </div>
 
-    <nav>
-        <a href="{% url "Importancia" %}" class="boton">Importancia</a>
-        <a href="{% url "Historia" %}" class="boton">Historia</a>
-        <a href="{% url "Lista_serpientes" %}" class="boton">Ubicacion</a>
-        <a href="{% url "Formulario" %}" class="boton">Unirse</a>
-    </nav>
+    <div  class="menu">
+        <nav>
+            <a href="{% url "Importancia" %}" class="boton">Importancia</a>
+            <a href="{% url "Historia" %}" class="boton">Historia</a>
+            <a href="{% url "Lista_serpientes" %}" class="boton">Ubicacion</a>
+            <a href="{% url "Formulario" %}" class="boton">Unirse</a>
+        </nav>
+    </div>
 </div>

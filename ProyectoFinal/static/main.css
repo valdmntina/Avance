@@ -32,14 +32,23 @@ header{
 }
 
 .logo{
-    width: 2.5rem;
+    text-align: start;
+    width: 50%;
+    padding-left: 32px;
 }
 
 .div_navegacion{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+}
+
+.menu{
+    display: flex;
+    justify-content: start;
+    width: 50%;
+
 }
 
 nav a.boton{

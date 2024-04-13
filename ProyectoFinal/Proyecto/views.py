@@ -244,34 +244,16 @@ def info_serpiente(request, id):
     })
 
 def formulario(request):
-  form = Form()
-  return render(request, 'formulario.html',{
-      'formulario': form})
+    if request.method == 'POST':
+      form = Form(request.POST)
+      if form.is_valid():
+          form.save()         
+    else:
+        form =Form()
+    return render(request, 'formulario.html',{
+        'formulario': form})
 
-
-# def registrar_formulario(request):
-#     nombre = request.POST['nombre']
-#     apellido = request.POST['apellido']
-#     telefono = request.POST['telefono']
-#     correo = request.POST['correo']
-#     ubicacion = request.POST['ubicacion']
-#     Formulario.objects.create(nombre=nombre,
-#                               apellido=apellido,
-#                               telefono=telefono,
-#                               correo=correo,
-#                               ubicacion=ubicacion)
-#     return redirect("index")
-
-
-# def formulario(request):
-#     if request.method == 'POST':
-#         form = Form(request.POST)
-#         if form.is_valid():
-#             #form.save
-#             #return HttpResponse("Formulario exitoso")
-#             return render(request, 'formulario.html', {})
-#         else:
-#             form = Form()
-#             return render(request, 'formulario.html',{
-#             'formulario': form
-#     })
+def elimina_formulario(request, id):
+    formulario = Formulario.objects.get(id=id)
+    formulario.delete()
+    return HttpResponse('Eliminados exitosamente')
