@@ -23,6 +23,8 @@ urlpatterns = [
     #menu formulario
     path('formulario/', views.formulario, name='Formulario'),
     #eliminé registros repetidos mediante id en la url
-    path('form/<int:id>', views.elimina_formulario, name='eliminar_datos')
+    path('form/<int:id>', views.elimina_formulario, name='eliminar_datos'),
+    #eliminé imagenes de base de dt
+    path('eliminar_imagenes/', views.eliminar_imagenes, name='eliminar_imagenes')
     
 ]   

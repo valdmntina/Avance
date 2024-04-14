@@ -236,7 +236,6 @@ def lista_serpientes(request):
         'especie': especies
     } )
 
-
 def info_serpiente(request, id):
     serpiente = Serpientes.objects.get(id=id)
     return render(request, "info_serpiente.html", {
@@ -257,3 +256,13 @@ def elimina_formulario(request, id):
     formulario = Formulario.objects.get(id=id)
     formulario.delete()
     return HttpResponse('Eliminados exitosamente')
+
+def eliminar_imagenes(request):
+    serpientes = Serpientes.objects.all()
+    for serpiente in serpientes:
+        if serpiente.foto:
+            serpiente.foto.delete(save=False)
+            serpiente.foto = None
+            serpiente.save()
+    return HttpResponse('se elimino')
+

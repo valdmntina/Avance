@@ -8,7 +8,7 @@ class Serpientes(models.Model):
     nombre_comun = models.CharField(max_length=100)
     habitat = models.CharField(max_length=100)
     descripcion = models.CharField(max_length=100)
-    foto = models.ImageField(null = True)
+    foto = models.ImageField(null = True, blank=True)
 
     def __str__(self):
       return self.nombre_comun
@@ -32,3 +32,4 @@ class Formulario(models.Model):
     telefono = models.CharField(max_length=10,
                                 verbose_name='Telefono')
     correo = models.EmailField(verbose_name='Correo electronico')
+    

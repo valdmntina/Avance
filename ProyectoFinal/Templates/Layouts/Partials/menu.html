@@ -1,8 +1,7 @@
 {% load static %}
 
-<link rel="stylesheet" href="{% static 'main.css' %}">
 
-<div class="div_navegacion">
+<div class="content div_navegacion">
     <div class="logo">
         <a href="{% url "index" %}">
             <img src="{% static "assets/houses.png" %}" alt="logo">
@@ -11,10 +10,20 @@
 
     <div  class="menu">
         <nav>
-            <a href="{% url "Importancia" %}" class="boton">Importancia</a>
-            <a href="{% url "Historia" %}" class="boton">Historia</a>
-            <a href="{% url "Lista_serpientes" %}" class="boton">Ubicacion</a>
-            <a href="{% url "Formulario" %}" class="boton">Unirse</a>
+            <ul class="lista">
+                <li class="item">
+                    <a href="{% url "Importancia" %}" class="link">Importancia</a>
+                </li>
+                <li class="item">
+                    <a href="{% url "Historia" %}" class="link">Historia</a>
+                </li>
+                <li class="item">
+                    <a href="{% url "Lista_serpientes" %}" class="link">Ubicacion</a>
+                </li>
+                <li class="item">
+                    <a href="{% url "Formulario" %}" class="link">Unirse</a>
+                </li>
+            </ul>
         </nav>
     </div>
 </div>
