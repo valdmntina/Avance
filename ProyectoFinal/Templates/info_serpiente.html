@@ -15,24 +15,27 @@
     </header>
     
     <main>
-        <h1>Caracteristicas de la especie</h1>
-        <p>Venenosa: 
-            {% if serpiente.caracteristica.venenosa == 0 %}
-            No
-            {% else %}
-            Sí
-            {% endif %}
-        </p>
-        <p>
-            Patrón de colores: {{ serpiente.caracteristica.color_patron }}
-        </p>
-        <p>
-            Alimentación: {{ serpiente.caracteristica.alimentacion }}
-        </p>
-        <p>
-            Imagen: <img src="../static/assets/assets2/{{serpiente.foto}}" >
-        </p>
-
+        <h1 class="subtitulo info_titulo">Caracteristicas de la especie</h1>
+        <div class="info_cuadro">
+            <div>
+                <p><strong class="subtitulo">Venenosa:</strong> 
+                    {% if serpiente.caracteristica.venenosa == 0 %}
+                    No
+                    {% else %}
+                    Sí
+                    {% endif %}
+                </p>
+                <p>
+                    <strong class="subtitulo">Patrón de colores:</strong> {{ serpiente.caracteristica.color_patron }}
+                </p>
+                <p>
+                    <strong class="subtitulo">Alimentación:</strong> {{ serpiente.caracteristica.alimentacion }}
+                </p>
+                <p>
+                    <strong class="subtitulo">Imagen de referencia:</strong> <img src="../static/assets/assets2/{{serpiente.foto}}" class="info_foto">
+                </p>
+            </div>
+        </div>
     </main>
 
 </body>
