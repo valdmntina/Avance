@@ -11,6 +11,11 @@
 <body>
 
     <header>
+        <div class="logo">
+            <a href="{% url "Lista_serpientes" %}">
+                <img src="{% static "assets/flecha.png" %}" alt="logo" class="loguito">
+            </a>
+        </div>
         {% include 'Layouts/Partials/menu.html' %}
     </header>
     

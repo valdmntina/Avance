@@ -204,54 +204,6 @@ nav a:hover, .loguito:hover{
 }
 
 /* FIN INICIO */
-/* FOOTER */
-
-footer{
-    background-color: var(--color-one);
-    padding: 2px;
-    text-align: center;
-}
-
-.frase{
-    font-size: small;
-    color: black;
-    margin-bottom: 10px;
-}
-
-.redes-sociales{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.redes-sociales a {
-    display: inline-block;
-    width: 30px;
-    height: 40px;
-    margin: 0 5px;
-    font-size: 20px;
-    transition: all 0.3s ease;
-}
-
-.social-icon{
-    height: 30px;
-    width: 30px;
-    /* border-radius: 50px; */
-    background-image: url(assets/logofacebook.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0 5px;
-}
-
-.social-icon:hover{
-    filter: invert(1);
-}
-
-.frase_bajo{
-    font-size: smaller;
-}
-
-/* FIN FOOTER */
 /* IMPORTANCIA */
 
 .container-importancia{
@@ -314,6 +266,7 @@ main{
     background-color: var(--color-one);
 }
 
+/*FIN IMPORTANCIA*/
 /* HISTORIA */
 
 .parrafo_historia{
@@ -394,6 +347,7 @@ main{
     border-radius: 5px;
 }
 
+/*FIN HISTORIA*/
 /* UBICACION */
 
 .ubicacion_titulo{
@@ -455,7 +409,18 @@ main{
     padding: 10px;
 }
 
+/*FIN UBICACION*/
 /* FORMULARIO */
+
+.unirse_foto{
+    display: flex;
+    max-width: 20rem;
+    height: auto;
+    border: 5px solid none;
+    border-radius: 2rem;
+    margin-left: 28%;
+    padding: 18px;
+}
 
 .form_texto{
     display: flex;
@@ -464,8 +429,6 @@ main{
     align-items: center;
     margin: 6.5% auto;
 }
-
-
 
 .contenedor_unirse{
     width: 50%;
@@ -550,3 +513,52 @@ div input:focus{
 .botoncito:hover{
     background: var(--color-four);
 } 
+
+/*FIN FORMULARIO*/
+/* FOOTER */
+
+footer{
+    background-color: var(--color-one);
+    padding: 2px;
+    text-align: center;
+}
+
+.frase{
+    font-size: small;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.redes-sociales{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.redes-sociales a {
+    display: inline-block;
+    width: 30px;
+    height: 40px;
+    margin: 0 5px;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.social-icon{
+    height: 30px;
+    width: 30px;
+    margin-top: -12px;
+    background-image: url(assets/logofacebook.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.social-icon:hover{
+    filter: invert(1);
+}
+
+.frase_bajo{
+    font-size: smaller;
+}
+
+/* FIN FOOTER */

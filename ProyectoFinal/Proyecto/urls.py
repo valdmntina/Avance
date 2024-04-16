@@ -5,7 +5,7 @@ urlpatterns = [
     path('inicio/', views.index, name='index'),
     #menu importancia
     path('importancia/', views.importancia, name='Importancia'),
-    #menu historuia
+    #menu historia
     path('historia/', views.historia, name='Historia'),
     #registré serpientes con url
     path('registrar_serpiente/<str:ncien>/<str:ncomu>/<str:h>/<str:d>', views.registrar_serpientes, name='registrar_serpientes'), #no usar de nuevo
