@@ -13,31 +13,44 @@
 <body>
 
     <header>
+        <div class="logo">
+            <a href="{% url "index" %}">
+                <img src="{% static "assets/houses.png" %}" alt="logo" class="loguito">
+            </a>
+        </div>
         {% include "Layouts/Partials/menu.html" %}
     </header>
 
-    <div class="contenedor_unirse">
-        <h1 class="subtitulo form_titulo">¡Unete a nuestra comunidad!</h1>
-        <p>
-            Esperamos que nuestra pagina sea de tu agrado, si gustas puedes dejarnos tus datos para
-            incluirte en nuestra pequeña pero acojedora comunidad, donde podras expandir tus conocimientos
-            y encontrar más personas con las cuales podras conectar gracias a este peculiar y hermoso animal.
-        </p>
-    </div>
-  
-    <section class="contenedor">
-        <div class="fondo">
-            <h2 class="subtitulo titulo_datos">Por favor ingresa tus datos</h2>
+    <div class="form_texto">
+        <div class="contenedor_unirse">
+            <h1 class="subtitulo form_titulo">¡Unete a nuestra comunidad!</h1>
+            <p class="form_parrafo">
+                Las serpientes a lo largo de los años han sido animales incomprendidos y sumamente juzgados, el principal objetivo de esta pagina es que
+                comprendas su verdadero proposito en la tierra, que conocieras la importancia de este animal para el ecosistema, vieras la perspectiva 
+                de el desde diferentes contextos tanto historicos como religiosos y porque no, que te llamara más la atencion y desees aprender más de ellas.
+            </p>
+            <p>
+                Esperamos que nuestra pagina sea de tu agrado y deseamos invitarte cordialmente a nuestra comunidad, si gustas puedes dejarnos tus datos para
+                incluirte, aquí podras expandir tus conocimientos, participar en multiples actividades y encontrar más personas con las cuales podras conectar en un
+                espacio libre de prejuicios y lleno de inlcusión. 
+            </p>
         </div>
-        <form method="POST" class="formulario">
-            {% csrf_token %}
-            {{formulario}}
-            <div>
-                <button class="botoncito" type="submit">Registrar</button>
+      
+        <div class="contenedor contenedor_form">
+            <div class="fondo">
+                <h2 class="subtitulo titulo_datos">Por favor ingresa tus datos</h2>
             </div>
-        </form>
-    </section>
-
+            <div class="form_p">
+                <form method="POST" class="formulario">
+                    {% csrf_token %}
+                    {{formulario}}
+                    <div>
+                        <button class="botoncito" type="submit">Registrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
 </body>
 

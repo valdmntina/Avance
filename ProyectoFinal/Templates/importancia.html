@@ -11,6 +11,11 @@
 
 <body>
     <header>
+        <div class="logo">
+            <a href="{% url "index" %}">
+                <img src="{% static "assets/houses.png" %}" alt="logo" class="loguito">
+            </a>
+        </div>
         {% include "Layouts/Partials/menu.html" %}
     </header>
     <main>

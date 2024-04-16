@@ -47,7 +47,13 @@ header{
     display: flex;
     margin: 0 auto;
     width: 50%;
+}
 
+.loguito{
+    width: 22px;
+    height: auto;
+    border-radius: 8px;
+    background-color: var(--color-four);
 }
 
 .lista{
@@ -81,7 +87,7 @@ nav a.boton{
 }
 
 
-nav a:hover{
+nav a:hover, .loguito:hover{
     background-color: var(--color-two)
 }
 
@@ -191,14 +197,11 @@ nav a:hover{
 
 /* FIN INICIO */
 /* FOOTER */
+
 footer{
     background-color: var(--color-one);
     padding: 2px;
     text-align: center;
-    /* position: 10px;
-    bottom: 0;
-    left: 0;
-    /* width: 100%; */
 }
 
 .frase{
@@ -242,6 +245,7 @@ footer{
 
 /* FIN FOOTER */
 /* IMPORTANCIA */
+
 .container-importancia{
     margin: 1rem;
 }
@@ -442,7 +446,26 @@ main{
     margin-left: 36px;
     padding: 10px;
 }
+
 /* FORMULARIO */
+
+.form_texto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 6.5% auto;
+}
+
+
+
+.contenedor_unirse{
+    width: 50%;
+}
+
+.form_p{
+    flex: 1;
+}
 
 .fondo{
     background-color: var(--color-four);
@@ -457,18 +480,13 @@ main{
 }
 
 .contenedor{
-    flex: 1;
-    margin-top: 2rem;
-    position: absolute;
-    top: 50%;
-    left: 85rem;
-    transform: translate(-50%, -50%);
+    padding: auto;
     max-width: 700px;
-    width: 100%;
     background: #fff;
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 50%;
 }
 
 .contenedor .formulario{
