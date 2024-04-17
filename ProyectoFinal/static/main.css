@@ -250,6 +250,7 @@ main{
     height: auto;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(28, 25, 25, 0.1);
+    border: 8px solid var(--color-one)
 }
 
 .imagen2{
@@ -257,6 +258,7 @@ main{
     height: auto;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(28, 25, 25, 0.1);
+    border: 8px solid var(--color-one)
 }
 
 /*FIN IMPORTANCIA*/
