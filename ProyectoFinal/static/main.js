@@ -24,7 +24,6 @@ function validarTelefono(event) {
 
 document.getElementById("id_telefono").addEventListener('keydown', validarTelefono);        
 
-//const key = event.key;
 
 function validarCorreo(element) {
     element.addEventListener('blur', ()=>{
@@ -40,7 +39,6 @@ function validarCorreo(element) {
 
 function validarCel(element) {
     element.addEventListener('blur', ()=>{
-//    const regex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
     if (element.value.length < 10){
         element.style.borderColor = 'salmon';
     } else{
@@ -52,11 +50,15 @@ function validarCel(element) {
 
 validarCel(telefono);
 validarCorreo(correo);
-    /*    
-    if (!regex.test(key)) {
-        //event.preventDefault();
-        c.value.style.bor
-    }
-}
-*/
-//document.getElementById("id_correo").addEventListener('blur', validarCorreo);
+
+
+// const formulario = document.getElementsByClassName('formulario')[0];
+
+// formulario.addEventListener('submit', function(event) {
+//     event.preventDefault();
+
+//     const elementosFormulario = document.getElementsByClassName('formulario');
+//     for (let i = 0; i < elementosFormulario.length; i++) //oculta los elementos del formulario iterando sobre ellos 
+
+//     alert('¡Formulario enviado exitosamente :D!');
+// })
