@@ -3,7 +3,7 @@ const telefono = document.getElementById('id_telefono');
 
 function validarSoloLetras(event) {
     const key = event.key
-    const regex = /^[a-zA-Z\s]*$/;
+    const regex = /^[a-zA-ZñÑ\s]*$/;
     if (!regex.test(key)) {
         event.preventDefault();
     }
