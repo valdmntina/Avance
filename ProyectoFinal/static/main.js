@@ -1,25 +1,62 @@
+const correo = document.getElementById('id_correo');
+const telefono = document.getElementById('id_telefono');
 
-const nombre = document.getElementById('id_nombre')
-const apellido = document.getElementById('id_apellido')
-const telefono = document.getElementById('id_telefono')
-const correo = document.getElementById('id_correo')
-
-let n_nombre = /^[a-zA-Z]+(?: [a-zA-Z]+){0,19}$/;
-let t_telefono = /^[0-9]{10}$/;
-let c_correo = /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z]{2,}))$/;
-
-const validarLetras = function(campo) {
-    if (n_nombre.test(campo.value)) {
-        return true;
-    } else {
-        return false;
+function validarSoloLetras(event) {
+    const key = event.key
+    const regex = /^[a-zA-Z\s]*$/;
+    if (!regex.test(key)) {
+        event.preventDefault();
     }
 }
 
-const validarTelefono = function (campo) {
-    if (t_telefono.test(telefono.value)) {
-        return true;
-    } else {
-        return false;
+document.getElementById("id_nombre").addEventListener('keydown', validarSoloLetras);
+document.getElementById("id_apellido").addEventListener('keydown', validarSoloLetras);
+
+
+function validarTelefono(event) {
+    const key = event.key
+    const regex = /^[0-9]*$/;
+    const specialKeys = ['Backspace', 'Delete', 'ArrowLeft', 'ArrowRigth', 'Tab', 'Enter'];
+    if (!regex.test(key) && !specialKeys.includes(key)) {
+        event.preventDefault();
+    }
 }
+
+document.getElementById("id_telefono").addEventListener('keydown', validarTelefono);        
+
+//const key = event.key;
+
+function validarCorreo(element) {
+    element.addEventListener('blur', ()=>{
+    const regex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
+    if (!regex.test(element.value)){
+        element.style.borderColor = 'salmon';
+    } else{
+        element.style.borderColor = 'green';
+        
+    }
+    })
+  }
+
+function validarCel(element) {
+    element.addEventListener('blur', ()=>{
+//    const regex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
+    if (element.value.length < 10){
+        element.style.borderColor = 'salmon';
+    } else{
+        element.style.borderColor = 'green';
+        
+    }
+    })
+  }
+
+validarCel(telefono);
+validarCorreo(correo);
+    /*    
+    if (!regex.test(key)) {
+        //event.preventDefault();
+        c.value.style.bor
+    }
 }
+*/
+//document.getElementById("id_correo").addEventListener('blur', validarCorreo);

@@ -115,7 +115,7 @@ nav a:hover, .loguito:hover{
 }
 
 .encabezado__titulo{
-    font-size: 35px;
+    font-size: 42px;
     font-weight: bold;
     text-align: center;
     color: white;
@@ -503,6 +503,7 @@ div input:focus{
     cursor: pointer;
     transition: all 0.2 ease;
     background: var(--color-two);
+    border-radius: 10px;
 }
 
 .botoncito:hover{
