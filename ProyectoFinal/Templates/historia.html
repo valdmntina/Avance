@@ -11,11 +11,11 @@
 <body>
     <header>
         <div class="logo">
-            <a href="{% url "index" %}">
+            <a href="{% url "index" %}"> {% comment "permite que el logo proporcionado redireccione al inicio de la pagina" %}{% endcomment %}
                 <img src="{% static "assets/houses.png" %}" alt="logo" class="loguito">
             </a>
         </div>
-        {% include "Layouts/Partials/menu.html" %}
+        {% include "Layouts/Partials/menu.html" %} {% comment "este include permite traer desde otras carpetas el menu de la pagina" %}{% endcomment %}
     </header>
     <main>
         <h1 class="subtitulo proposito">Presente desde hace millones de años</h1>
@@ -39,7 +39,7 @@
         </p>
         <div class="div">
             <figure class="imagen-container">
-                <img class="imagen_1" src="{% static "assets/adanyeva.jpg" %}" >
+                <img class="imagen_1" src="{% static "assets/adanyeva.jpg" %}" > {% comment "de esta manera llamamos a las imagenes que estan almacenadas en static" %}{% endcomment %}
                 <img class="imagen_1" src="{% static "assets/inmaculadaconcepcion.webp" %}" >
                 <img class="imagen_3" src="{% static "assets/moisesserpiente.jpg" %}" >
                 <img class="imagen_4" src="{% static "assets/moisesserpiente2.jpg" %}" >

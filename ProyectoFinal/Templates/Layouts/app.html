@@ -8,7 +8,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap')
     </style>
-    <link rel="stylesheet" href="{% static 'main.css' %}">
+    <link rel="stylesheet" href="{% static 'main.css' %}"> {% comment "trae los estilos de css de la carpeta static" %}{% endcomment %}
     <title>Inicio</title>
 </head>
 <body>
@@ -19,7 +19,9 @@
 
 {% block header %}{% endblock header %}
 
+{% comment "incluye el html de inicio que esta en layouts dentro de partials" %}{% endcomment %}
 {% include "Layouts/Partials/inicio.html" %}
+{% comment "incluye el html de footer que esta en layouts dentro de partials" %}{% endcomment %}
 {% include "Layouts/Partials/footer.html" %}
 
 

@@ -14,18 +14,21 @@ def importancia(request):
 def historia(request):
     return render(request, 'historia.html')
 
+#con esto ingresaba los datos mediante url
 def registrar_serpientes(request, ncien, ncomu, h, d):
     nueva_serpiente = Serpientes(nombre_cientifico= ncien, nombre_comun=ncomu,
                                  habitat=h, descripcion=d)
     nueva_serpiente.save()
     return HttpResponse('Se registro exitosamente')
 
+#con esto edite la re cagada que me mande arriba
 def editar(request):
     registro = Serpientes.objects.get(id=3)
     registro.habitat = 'Bosques tropicales y sabanas'
     registro.save()
     return HttpResponse('corregido')
 
+#con esto registré las serpientes en la base de datos
 def registro_serpientes(request): #ya use todo esto, no usar de nuevo a no ser que sea necesario, comentar los que ya estan
     # INOFENSIVAS
     serpiente4 = Serpientes.objects.create(nombre_cientifico='Pantherophis guttatus',
@@ -108,6 +111,8 @@ def registro_serpientes(request): #ya use todo esto, no usar de nuevo a no ser q
     serpiente16.save()
     return HttpResponse('Registradassss :DD')
 
+
+#con esto registre las caracteristicas en la base de datos
 def caracteristica_serpiente(request): #ya use todo esto, no usar de nuevo a no ser que sea necesario, comentar los que ya estan
     serpiente1 = Serpientes.objects.get(id=1)
     caracteristicas = Caracteristica.objects.create(venenosa=False,
@@ -223,40 +228,46 @@ def caracteristica_serpiente(request): #ya use todo esto, no usar de nuevo a no 
     caracteristicas16.save()
     return HttpResponse('Se registro exitosamente')
     
-    
+
+#con esto eliminé los registros que se me fueron de mas
 def elimina(request, id):
     caracteristica = Caracteristica.objects.get(id=id)
     caracteristica.delete()
     return HttpResponse('Se eliminaron los repetidos')
 
-
+#con esto genero el listado de las serpientes
 def lista_serpientes(request):
     especies = Serpientes.objects.all()
     return render (request, 'ubicacion.html', {
         'especie': especies
     } )
 
+#con esto genero la informacion de las serpientes
 def info_serpiente(request, id):
     serpiente = Serpientes.objects.get(id=id)
     return render(request, "info_serpiente.html", {
         'serpiente': serpiente
     })
 
+#con esto hago que cargue y guarde el formulario en la base de datos
 def formulario(request):
     if request.method == 'POST':
       form = Form(request.POST)
       if form.is_valid():
-          form.save()         
+          form.save()  
+          form = Form()
     else:
         form =Form()
     return render(request, 'formulario.html',{
         'formulario': form})
 
+#con esto eliminé elementos repetidos en el formulario
 def elimina_formulario(request, id):
     formulario = Formulario.objects.get(id=id)
     formulario.delete()
     return HttpResponse('Eliminados exitosamente')
 
+#con esto eliminé las imagenes que tenia enla base de datos
 def eliminar_imagenes(request):
     serpientes = Serpientes.objects.all()
     for serpiente in serpientes:

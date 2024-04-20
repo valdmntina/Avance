@@ -12,11 +12,11 @@
 
     <header>
         <div class="logo">
-            <a href="{% url "Lista_serpientes" %}">
+            <a href="{% url "Lista_serpientes" %}"> {% comment "permite que la flecha proporcionada redireccione a ubicacion" %}{% endcomment %}
                 <img src="{% static "assets/flecha.png" %}" alt="logo" class="loguito">
             </a>
         </div>
-        {% include 'Layouts/Partials/menu.html' %}
+        {% include 'Layouts/Partials/menu.html' %} {% comment "este include permite traer desde otras carpetas el menu de la pagina" %}{% endcomment %}
     </header>
     
     <main>
@@ -24,20 +24,20 @@
         <div class="info_cuadro">
             <div>
                 <p><strong class="subtitulo">Venenosa:</strong> 
-                    {% if serpiente.caracteristica.venenosa == 0 %}
+                    {% if serpiente.caracteristica.venenosa == 0 %} {% comment "con esta condicional se pregunta si la informacion venenosa en caracteristicas es igual a 0 significara que si de lo contrario sera no" %}{% endcomment %}
                     No
                     {% else %}
                     Sí
                     {% endif %}
                 </p>
                 <p>
-                    <strong class="subtitulo">Patrón de colores:</strong> {{ serpiente.caracteristica.color_patron }}
+                    <strong class="subtitulo">Patrón de colores:</strong> {{ serpiente.caracteristica.color_patron }} {% comment "muestra los datos de color patron en la tabla de caracteristicas" %}{% endcomment %}
                 </p>
                 <p>
-                    <strong class="subtitulo">Alimentación:</strong> {{ serpiente.caracteristica.alimentacion }}
+                    <strong class="subtitulo">Alimentación:</strong> {{ serpiente.caracteristica.alimentacion }} {% comment "muestra los datos de alimentacion en la tabla de caracteristicas" %}{% endcomment %}
                 </p>
                 <p>
-                    <strong class="subtitulo">Imagen de referencia:</strong> <img src="../media/{{serpiente.foto}}" class="info_foto">
+                    <strong class="subtitulo">Imagen de referencia:</strong> <img src="../media/{{serpiente.foto}}" class="info_foto"> {% comment "muestra las imagenes incluidas en media las cuales estan en la base de datos" %}{% endcomment %}
                 </p>
             </div>
         </div>

@@ -11,11 +11,11 @@
 <body>
     <header>
         <div class="logo">
-            <a href="{% url "index" %}">
+            <a href="{% url "index" %}"> {% comment "permite que el logo proporcionado redireccione al inicio de la pagina" %}{% endcomment %}
                 <img src="{% static "assets/houses.png" %}" alt="logo" class="loguito">
             </a>
         </div>
-        {% include 'Layouts/Partials/menu.html' %}
+        {% include 'Layouts/Partials/menu.html' %} {% comment "este include permite traer desde otras carpetas el menu de la pagina" %}{% endcomment %}
     </header>
     <main>
         {% block content %}
@@ -27,10 +27,10 @@
                         <ul>
                             {% for s in especie %}
                             <li class="contenedor_s">
-                                <h3>{{s.nombre_comun}}</h3>
-                                <p>{{s.nombre_cientifico}}</p>
-                                <p>{{s.habitat}}</p>
-                                <a href="{% url "info_serpiente" s.id %}">Ver más</a>
+                                <h3>{{s.nombre_comun}}</h3> {% comment "muestra el nombre comun de la tabla serpientes" %}{% endcomment %}
+                                <p>{{s.nombre_cientifico}}</p> {% comment "muestra el nombre cientifico de la tabla serpientes" %}{% endcomment %}
+                                <p>{{s.habitat}}</p> {% comment "muestra el habitat de la tabla serpientes" %}{% endcomment %}
+                                <a href="{% url "info_serpiente" s.id %}">Ver más</a> {% comment "este ver mas redirecciona a otro html con la informacion proporcionada" %}{% endcomment %}
                             </li>
                             {% endfor %}
                         </ul>

@@ -54,11 +54,11 @@ header{
     float: left;
     margin-right: 10px;
     margin: 10px;
-    margin-left: 18px;
+    margin-left: 9px;
 }
 
 .loguito{
-    width: 20px;
+    width: 16px;
     height: auto;
     border-radius: 6px;
     background-color: var(--color-four);

@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-
+#modelo principal de la base de datos que incluye una foto
 class Serpientes(models.Model):
     nombre_cientifico = models.CharField(max_length=100)
     nombre_comun = models.CharField(max_length=100)
@@ -13,7 +13,7 @@ class Serpientes(models.Model):
     def __str__(self):
       return self.nombre_comun
     
-
+#segundo modelo de la base de datos que hereda de serpientes
 class Caracteristica(models.Model):
     venenosa = models.BooleanField(default=False) #especifica el valor por defecto si se intenta ingresar un valor vacio
     color_patron = models.CharField(max_length=100)
@@ -23,6 +23,7 @@ class Caracteristica(models.Model):
     def __str__(self):
         return self.venenosa
 
+#formulario basado en modelos
 class Formulario(models.Model):
     nombre = models.CharField(max_length=100,
                             #   id="nombre",

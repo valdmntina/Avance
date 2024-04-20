@@ -14,12 +14,12 @@
 <body>
 
     <header>
-        <div class="logo">
-            <a href="{% url "index" %}">
+        <div class="logo"> 
+            <a href="{% url "index" %}"> {% comment "permite que el logo proporcionado redireccione al inicio de la pagina" %}{% endcomment %}
                 <img src="{% static "assets/houses.png" %}" alt="logo" class="loguito">
             </a>
         </div>
-        {% include "Layouts/Partials/menu.html" %}
+        {% include "Layouts/Partials/menu.html" %} {% comment "este include permite traer desde otras carpetas el menu de la pagina" %}{% endcomment %}
     </header>
 
     <div class="form_texto">
